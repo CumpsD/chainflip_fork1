@@ -1,0 +1,88 @@
+var _path, _path2, _defs;
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+import * as React from "react";
+var SvgComputer = function SvgComputer(props) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 252,
+    height: 252,
+    fill: "none"
+  }, props), _path || (_path = /*#__PURE__*/React.createElement("path", {
+    stroke: "url(#computer_svg__a)",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: 7.952,
+    d: "M105.375 155.792h68.75c10.125 0 18.333-8.208 18.333-18.334V77.875c0-10.125-8.208-18.333-18.333-18.333h-96.25c-10.125 0-18.334 8.208-18.334 18.333v59.583c0 10.126 8.209 18.334 18.334 18.334h27.5Zm0 0s2.292 27.5-16.042 36.666h73.333c-18.333-9.166-16.041-36.666-16.041-36.666"
+  })), /*#__PURE__*/React.createElement("g", {
+    filter: "url(#computer_svg__b)",
+    opacity: 0.5,
+    style: {
+      mixBlendMode: "screen"
+    }
+  }, _path2 || (_path2 = /*#__PURE__*/React.createElement("path", {
+    stroke: "url(#computer_svg__c)",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: 7.952,
+    d: "M105.375 155.792h68.75c10.125 0 18.333-8.208 18.333-18.334V77.875c0-10.125-8.208-18.333-18.333-18.333h-96.25c-10.125 0-18.334 8.208-18.334 18.333v59.583c0 10.126 8.209 18.334 18.334 18.334h27.5Zm0 0s2.292 27.5-16.042 36.666h73.334c-18.334-9.166-16.042-36.666-16.042-36.666"
+  }))), _defs || (_defs = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+    id: "computer_svg__a",
+    x1: -14.482,
+    x2: 184.313,
+    y1: 2.747,
+    y2: 201.542,
+    gradientUnits: "userSpaceOnUse"
+  }, /*#__PURE__*/React.createElement("stop", {
+    stopColor: "#fff"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.333,
+    stopColor: "#fff",
+    stopOpacity: 0
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.667,
+    stopColor: "#fff"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 1,
+    stopColor: "#fff",
+    stopOpacity: 0
+  })), /*#__PURE__*/React.createElement("linearGradient", {
+    id: "computer_svg__c",
+    x1: -14.482,
+    x2: 184.313,
+    y1: 2.747,
+    y2: 201.542,
+    gradientUnits: "userSpaceOnUse"
+  }, /*#__PURE__*/React.createElement("stop", {
+    stopColor: "#fff"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.333,
+    stopColor: "#fff",
+    stopOpacity: 0
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.667,
+    stopColor: "#fff"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 1,
+    stopColor: "#fff",
+    stopOpacity: 0
+  })), /*#__PURE__*/React.createElement("filter", {
+    id: "computer_svg__b",
+    width: 250.869,
+    height: 250.868,
+    x: 0.565,
+    y: 0.566,
+    colorInterpolationFilters: "sRGB",
+    filterUnits: "userSpaceOnUse"
+  }, /*#__PURE__*/React.createElement("feFlood", {
+    floodOpacity: 0,
+    result: "BackgroundImageFix"
+  }), /*#__PURE__*/React.createElement("feBlend", {
+    "in": "SourceGraphic",
+    in2: "BackgroundImageFix",
+    result: "shape"
+  }), /*#__PURE__*/React.createElement("feGaussianBlur", {
+    result: "effect1_foregroundBlur_4547_4559",
+    stdDeviation: 27.5
+  })))));
+};
+export default SvgComputer;

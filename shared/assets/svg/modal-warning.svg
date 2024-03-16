@@ -1,0 +1,164 @@
+var _path, _path2, _g, _path3, _path4, _path5, _defs;
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+import * as React from "react";
+var SvgModalWarning = function SvgModalWarning(props) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 301,
+    height: 209,
+    fill: "none"
+  }, props), /*#__PURE__*/React.createElement("mask", {
+    id: "modal-warning_svg__b",
+    width: 333,
+    height: 327,
+    x: 73,
+    y: -120,
+    maskUnits: "userSpaceOnUse",
+    style: {
+      maskType: "alpha"
+    }
+  }, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    fill: "url(#modal-warning_svg__a)",
+    d: "M73.927-120H406v326.482H73.927z"
+  }))), /*#__PURE__*/React.createElement("g", {
+    mask: "url(#modal-warning_svg__b)"
+  }, /*#__PURE__*/React.createElement("mask", {
+    id: "modal-warning_svg__d",
+    width: 333,
+    height: 327,
+    x: 73,
+    y: -120,
+    maskUnits: "userSpaceOnUse",
+    style: {
+      maskType: "alpha"
+    }
+  }, _path2 || (_path2 = /*#__PURE__*/React.createElement("path", {
+    fill: "url(#modal-warning_svg__c)",
+    d: "M73.927-120H406v326.482H73.927z"
+  }))), _g || (_g = /*#__PURE__*/React.createElement("g", {
+    strokeWidth: 1.118,
+    mask: "url(#modal-warning_svg__d)"
+  }, /*#__PURE__*/React.createElement("circle", {
+    cx: 235.491,
+    cy: 41.564,
+    r: 161.005,
+    fill: "#161616",
+    stroke: "#2B2B2B"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: 235.491,
+    cy: 41.564,
+    r: 146.47,
+    fill: "#161616",
+    stroke: "#2B2B2B"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: 235.491,
+    cy: 41.564,
+    r: 131.935,
+    fill: "#161616",
+    stroke: "#2B2B2B"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: 235.491,
+    cy: 41.564,
+    r: 117.399,
+    fill: "#161616",
+    stroke: "#2B2B2B"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: 235.491,
+    cy: 41.564,
+    r: 102.864,
+    fill: "#161616",
+    stroke: "#2B2B2B"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: 235.491,
+    cy: 41.564,
+    r: 88.329,
+    fill: "#161616",
+    stroke: "#2B2B2B"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: 235.491,
+    cy: 41.564,
+    r: 72.676,
+    fill: "#161616",
+    stroke: "#2B2B2B"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: 235.491,
+    cy: 41.564,
+    r: 58.141,
+    fill: "#161616",
+    stroke: "#2B2B2B"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: 235.491,
+    cy: 41.564,
+    r: 43.605,
+    fill: "url(#modal-warning_svg__e)",
+    stroke: "#2B2B2B"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: 235.491,
+    cy: 41.564,
+    r: 30.188,
+    fill: "#2B2B2B",
+    stroke: "#424242"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: 235.491,
+    cy: 41.564,
+    r: 24.598,
+    fill: "#424242",
+    stroke: "#5F5F5F"
+  })))), _path3 || (_path3 = /*#__PURE__*/React.createElement("path", {
+    stroke: "#fff",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: 1.677,
+    d: "m228.17 46.99 5.885-11.736c.825-1.645 3.174-1.645 3.998 0l5.879 11.738c.745 1.486-.336 3.237-1.999 3.237h-11.764c-1.663 0-2.744-1.751-1.999-3.238Z"
+  })), _path4 || (_path4 = /*#__PURE__*/React.createElement("path", {
+    stroke: "#fff",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: 2.236,
+    d: "M236.05 39.887v2.236"
+  })), _path5 || (_path5 = /*#__PURE__*/React.createElement("path", {
+    fill: "#fff",
+    d: "M236.05 47.714a1.118 1.118 0 1 0 0-2.236 1.118 1.118 0 0 0 0 2.236Z"
+  })), _defs || (_defs = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+    id: "modal-warning_svg__a",
+    x1: 239.964,
+    x2: 239.964,
+    y1: -99.315,
+    y2: 146.664,
+    gradientUnits: "userSpaceOnUse"
+  }, /*#__PURE__*/React.createElement("stop", {
+    offset: 0.416,
+    stopColor: "#D9D9D9"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.826,
+    stopColor: "#D9D9D9",
+    stopOpacity: 0
+  })), /*#__PURE__*/React.createElement("linearGradient", {
+    id: "modal-warning_svg__e",
+    x1: 235.491,
+    x2: 235.491,
+    y1: -2.601,
+    y2: 85.728,
+    gradientUnits: "userSpaceOnUse"
+  }, /*#__PURE__*/React.createElement("stop", {
+    stopColor: "#1F1F1F"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 1,
+    stopColor: "#272525",
+    stopOpacity: 0
+  })), /*#__PURE__*/React.createElement("radialGradient", {
+    id: "modal-warning_svg__c",
+    cx: 0,
+    cy: 0,
+    r: 1,
+    gradientTransform: "matrix(0 163.241 -166.036 0 239.964 43.241)",
+    gradientUnits: "userSpaceOnUse"
+  }, /*#__PURE__*/React.createElement("stop", {
+    stopColor: "#D9D9D9"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 1,
+    stopColor: "#D9D9D9",
+    stopOpacity: 0
+  })))));
+};
+export default SvgModalWarning;
