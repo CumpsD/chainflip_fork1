@@ -1,7 +1,7 @@
 import { forwardRef, type MouseEventHandler } from 'react';
 import classNames from 'classnames';
-import * as spinnerBlack from '../../animations/spinner-black.json';
-import * as spinnerWhite from '../../animations/spinner-white.json';
+// import * as spinnerBlack from '../../animations/spinner-black.json';
+// import * as spinnerWhite from '../../animations/spinner-white.json';
 import ArrowRight from '../../icons/ArrowRight';
 import Lottie from '../../utils/Lottie';
 
@@ -134,7 +134,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       )}
       {loading && (
         <>
-          <Lottie
+          {/* <Lottie
             as="div"
             animationData={
               type.includes('ghost') || disabled || type.includes('secondary')
@@ -144,7 +144,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             autoplay
             loop
             className="h-[18px] w-[18px]"
-          />
+          /> */}
           {loading !== 'iconOnly' && (
             <span className={classNames('ml-2', size === 'large' ? 'text-16' : 'text-14')}>
               {loadingText}

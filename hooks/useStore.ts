@@ -1,24 +1,24 @@
-import type {} from '@redux-devtools/extension'; // required for devtools typing
-import { create } from 'zustand';
-import { devtools } from 'zustand/middleware';
-import { immer } from 'zustand/middleware/immer';
-import { validateChainAddress } from '@/shared/assets/chains/addressValidation';
-import { type Token } from '@/shared/assets/tokens';
-import { chainflipAssetMap, type TokenAmount } from '@/shared/utils';
-import type { RouteResponse } from '../integrations';
+import type {} from '@redux-devtools/extension' // required for devtools typing
+import { create } from 'zustand'
+import { devtools } from 'zustand/middleware'
+import { immer } from 'zustand/middleware/immer'
+import { validateChainAddress } from '@/shared/assets/chains/addressValidation'
+import { type Token } from '@/shared/assets/tokens'
+import { chainflipAssetMap, type TokenAmount } from '@/shared/utils'
+import type { RouteResponse } from '../integrations'
 
 interface Store {
-  srcToken: Token | undefined;
-  srcAmount: TokenAmount | undefined;
-  destToken: Token | undefined;
-  destinationAddress: string;
-  selectedRoute: RouteResponse | undefined;
-  setSrcToken: (srcToken: Token | undefined) => void;
-  setSrcAmount: (srcAmount: TokenAmount | undefined) => void;
-  setDestToken: (destToken: Token | undefined) => void;
-  setDestinationAddress: (destinationAddress: string) => void;
-  setSelectedRoute: (selectedRoute: RouteResponse | undefined) => void;
-  reset: () => void;
+  srcToken: Token | undefined
+  srcAmount: TokenAmount | undefined
+  destToken: Token | undefined
+  destinationAddress: string
+  selectedRoute: RouteResponse | undefined
+  setSrcToken: (srcToken: Token | undefined) => void
+  setSrcAmount: (srcAmount: TokenAmount | undefined) => void
+  setDestToken: (destToken: Token | undefined) => void
+  setDestinationAddress: (destinationAddress: string) => void
+  setSelectedRoute: (selectedRoute: RouteResponse | undefined) => void
+  reset: () => void
 }
 
 const initialData = {
@@ -27,7 +27,7 @@ const initialData = {
   destToken: chainflipAssetMap.Eth,
   destinationAddress: '',
   selectedRoute: undefined,
-};
+}
 
 const useStore = create<Store>()(
   devtools(
@@ -38,22 +38,29 @@ const useStore = create<Store>()(
       setDestToken: (destToken) => set({ destToken }, false, 'setDestToken'),
       setDestinationAddress: (destinationAddress) =>
         set({ destinationAddress }, false, 'setDestinationAddress'),
-      setSelectedRoute: (selectedRoute) => set({ selectedRoute }, false, 'setSelectedRoute'),
+      setSelectedRoute: (selectedRoute) =>
+        set({ selectedRoute }, false, 'setSelectedRoute'),
       reset: () => set({ ...initialData }, false, 'reset'),
-    })),
-  ),
-);
+    }))
+  )
+)
 
 export const selectDestinationAddressValid = (state: Store) => {
   if (state.destinationAddress) {
     return (
-      !state.destToken || validateChainAddress(state.destinationAddress)[state.destToken.chain.id]
-    );
+      !state.destToken ||
+      validateChainAddress(state.destinationAddress)[state.destToken.chain.id]
+    )
   }
-  return false;
-};
+  return false
+}
 
 export const selectShowRouteList = (state: Store) =>
-  Boolean(state.srcAmount && state.srcToken && state.destToken && state.srcAmount.gt(0));
+  Boolean(
+    state.srcAmount &&
+      state.srcToken &&
+      state.destToken &&
+      state.srcAmount.gt(0)
+  )
 
-export default useStore;
+export default useStore
