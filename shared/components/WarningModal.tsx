@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { Button } from '@/shared/components';
-import WarningHero from '../assets/svg/modal-warning.svg';
+import WarningHero from '../assets/svg/modal-warning';
 
 export const WarningModal = ({
   isOpen,

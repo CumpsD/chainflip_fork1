@@ -18,7 +18,7 @@ import {
   type ChainId,
   parseEvmChainId,
 } from '@/shared/assets/chains'
-import ChainflipMonochromaticLogo from '@/shared/assets/svg/monochromatic-logos/cf.svg'
+import ChainflipMonochromaticLogo from '@/shared/assets/svg/monochromatic-logos/cf'
 import { FlipLogo } from '@/shared/assets/token-logos'
 import {
   isChainflipTokenOrChain,
@@ -156,7 +156,8 @@ const buildEventLog = (
         status: 'success',
         linkTitle: 'View on Explorer',
         logo: Logo,
-        link: `${process.env.NEXT_PUBLIC_EXPLORER_URL}/swaps/${sdkStatus.swapId}`,
+        // link: `${process.env.NEXT_PUBLIC_EXPLORER_URL}/swaps/${sdkStatus.swapId}`,
+        link: '#',
       })
     }
   } else {

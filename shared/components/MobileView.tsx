@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import Computer from '../assets/svg/computer.svg';
+import Computer from '@/shared/assets/svg/computer'
 
 type SizeThreshold = 'small' | 'medium' | 'large';
 

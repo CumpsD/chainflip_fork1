@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { useRouter } from 'next/router';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
-import Logo from '@/shared/assets/chainflip-logo.svg';
+import Logo from '@/shared/assets/chainflip-logo';
 import { Link } from '@/shared/components';
 import { ChainflipNetworkBadge } from '@/shared/components/atoms/ChainflipNetworkBadge';
 import Banner from '@/shared/components/Banner';
@@ -18,7 +18,8 @@ export const Navbar = (): JSX.Element => {
       <>
         {/* <Link href="/pools">Pools</Link> */}
         <Link
-          href={new URL('/swaps', process.env.NEXT_PUBLIC_EXPLORER_URL).toString()}
+          // href={new URL('/swaps', process.env.NEXT_PUBLIC_EXPLORER_URL).toString()}
+          href="#"
           target="_blank"
           className="flex items-center space-x-1 text-14"
         >

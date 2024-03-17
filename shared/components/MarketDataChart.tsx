@@ -4,8 +4,8 @@ import * as LightweightCharts from 'lightweight-charts';
 import GraphLoader from '@/shared/components/GraphLoader';
 import { useEffectWithCleanup } from '@/shared/hooks';
 import { formatWithNumeral, isNullish, unreachable } from '@/shared/utils';
-import GoDown from '../assets/svg/go-down.svg';
-import GoUp from '../assets/svg/go-up.svg';
+import GoDown from '@/shared/assets/svg/go-down'
+import GoUp from '@/shared/assets/svg/go-up'
 
 const getDateFromTime = (time: LightweightCharts.Time) => {
   if (typeof time === 'number') return new Date(time * 1000);

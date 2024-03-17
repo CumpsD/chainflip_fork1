@@ -2,7 +2,7 @@ import { type ReactNode, useEffect, useState } from 'react';
 import { Link } from '@/shared/components';
 import { ChainflipNetworkBadge } from '@/shared/components/atoms/ChainflipNetworkBadge';
 import { CloseIcon, HamburgerIcon } from '@/shared/icons/large';
-import Logo from '../assets/svg/logo-white.svg';
+import Logo from '@/shared/assets/svg/logo-white'
 
 const Navbar = ({
   desktopContent,

@@ -1,7 +1,7 @@
 import classNames from 'classnames';
-import BitcoinLogo from '@/shared/assets/svg/chainpill-logos/btc.svg';
-import PolkadotLogo from '@/shared/assets/svg/chainpill-logos/dot.svg';
-import EthereumLogo from '@/shared/assets/svg/chainpill-logos/eth.svg';
+import BitcoinLogo from '@/shared/assets/svg/chainpill-logos/btc';
+import PolkadotLogo from '@/shared/assets/svg/chainpill-logos/dot';
+import EthereumLogo from '@/shared/assets/svg/chainpill-logos/eth';
 import { type ChainflipChain } from '../../utils/chainflip';
 
 const monoChromeLogo: Record<ChainflipChain, JSX.Element> = {
