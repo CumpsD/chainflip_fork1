@@ -24,9 +24,5 @@ You can start configuring server setting by modifying `src/server.js`. The serve
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+- NEXT_PUBLIC_CHAINFLIP_BACKEND_URL="http://localhost:3001"
 
-- [Node.js && Express Documentation](https://nextjs.org/docs) - learn about Node.js and NodeJS Framework features and API.
-- [Learn Node.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Node.js && Nest.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
