@@ -1,4 +1,5 @@
-import intervalToDuration from 'date-fns/intervalToDuration';
+import { intervalToDuration } from 'date-fns/intervalToDuration';
+import { Duration } from 'date-fns';
 import { pad } from '@/shared/utils';
 
 const Countdown = (

@@ -7,7 +7,7 @@ import useTokenPrice from '@/shared/hooks/useTokenPrice';
 import { EmojiSadIcon } from '@/shared/icons/large';
 import { ClockIcon, LayersIcon } from '@/shared/icons/small';
 import { formatToApproxTime } from '@/shared/utils';
-import Lottie from '@/shared/utils/Lottie';
+// import Lottie from '@/shared/utils/Lottie';
 import { integrationManager, type RouteResponse } from '../../../integrations';
 import RadioButton from '../../RadioButton';
 import { SwapDetails } from '../../SwapDetails';

@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { toCamelCase, TokenAmount } from '@/shared/utils';
 import { type ChainflipAsset } from '@/shared/utils/chainflip';
 import { chainflipAssetMap } from '@/shared/utils/env';
-import Lottie from '@/shared/utils/Lottie';
+// import Lottie from '@/shared/utils/Lottie';
 import TokenInputField from './TokenInputField';
 // import switchJSON from '../../assets/lotties/switch.json';
 import useStore from '../../hooks/useStore';

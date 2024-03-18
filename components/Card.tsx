@@ -18,3 +18,5 @@ const Card = React.forwardRef(
 );
 
 export default Card;
+
+Card.displayName = 'Card';

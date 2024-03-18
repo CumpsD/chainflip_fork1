@@ -1,7 +1,7 @@
 // import WhiteSpinner from '@/shared/animations/spinner-white.json';
 import { Tooltip } from '@/shared/components';
 import { Rotate2Icon } from '@/shared/icons/small';
-import Lottie from '@/shared/utils/Lottie';
+// import Lottie from '@/shared/utils/Lottie';
 
 export const RouteRefreshTimer = ({
   isRefreshing,
