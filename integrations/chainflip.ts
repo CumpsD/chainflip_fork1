@@ -10,7 +10,9 @@ import {
 } from '@chainflip/sdk/swap'
 import { isAxiosError } from 'axios'
 import { ethers } from 'ethers'
-import { type TransactionResponse } from 'ethers/src.ts/providers/provider'
+import { TransactionResponse } from 'ethers'
+
+// import { type TransactionResponse } from 'ethers/src.ts/providers/provider'
 import { erc20ABI, type WalletClient } from 'wagmi'
 import { getPublicClient } from 'wagmi/actions'
 import {
@@ -107,11 +109,17 @@ const mapChainflipChain = (chainflipChain: ChainflipChain): ChainId =>
 const mapChainflipAsset = (
   chainflipChain: ChainflipChain,
   chainflipAsset: ChainflipAsset
-): ChainflipToken =>
-  chainflipAssetMap[
-    getChainflipId({ asset: chainflipAsset, chain: chainflipChain })
-  ]
+): any => {
+  return null
+}
 
+// const mapChainflipAsset = (
+//   chainflipChain: ChainflipChain,
+//   chainflipAsset: ChainflipAsset
+// ): ChainflipToken =>
+//   chainflipAssetMap[
+//     getChainflipId({ asset: chainflipAsset, chain: chainflipChain })
+//   ]
 const mapChainflipStatus = (
   chainflipStatus: ChainflipSwapStatusResponse['state']
 ): SwapStatus => chainflipStatusMap[chainflipStatus] ?? 'unknown'

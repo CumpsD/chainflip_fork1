@@ -5,6 +5,7 @@ import {
   differenceInDays,
   intervalToDuration,
   format,
+  Interval,
 } from 'date-fns'
 import { FLIP_SYMBOL } from '@/shared/utils/env'
 import { isNullish } from './guards'

@@ -80,7 +80,7 @@ export default function SwapCard(): JSX.Element {
     destAsset: selectedRoute?.destToken,
   });
 
-  const { mutate: prepareSwap, isPending: isPreparingSwap } = useMutation({
+const { mutate: prepareSwap, /*(isPending: isPreparingSwap */} = useMutation({
     mutationFn: async () => {
       if (!validateForm()) return;
 
@@ -198,7 +198,7 @@ export default function SwapCard(): JSX.Element {
                 selectedRoute && selectedRoute.integration !== 'chainflip',
               )}
               chainId={selectedRoute?.srcToken.chain.id}
-              disabled={isPreparingSwap}
+              // disabled={isPreparingSwap}
               onClick={() => prepareSwap()}
             >
               Review swap
