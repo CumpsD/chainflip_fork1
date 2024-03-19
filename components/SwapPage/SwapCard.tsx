@@ -80,7 +80,8 @@ export default function SwapCard(): JSX.Element {
     destAsset: selectedRoute?.destToken,
   });
 
-const { mutate: prepareSwap, /*(isPending: isPreparingSwap */} = useMutation({
+  // const { mutate: prepareSwap, isPending: isPreparingSwap } = useMutation({    
+    const { mutate: prepareSwap} = useMutation({    
     mutationFn: async () => {
       if (!validateForm()) return;
 
@@ -135,6 +136,10 @@ const { mutate: prepareSwap, /*(isPending: isPreparingSwap */} = useMutation({
       });
 
       const preparedSwap = await integrationManager.prepareSwap(selectedRoute);
+
+      console.log(prepareSwap);
+      console.log(`/${preparedSwap.integration}/${preparedSwap.id}`);
+      
       await router.push(`/${preparedSwap.integration}/${preparedSwap.id}`);
     },
   });
@@ -199,6 +204,7 @@ const { mutate: prepareSwap, /*(isPending: isPreparingSwap */} = useMutation({
               )}
               chainId={selectedRoute?.srcToken.chain.id}
               // disabled={isPreparingSwap}
+              disabled={false}
               onClick={() => prepareSwap()}
             >
               Review swap

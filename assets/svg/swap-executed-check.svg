@@ -1,0 +1,175 @@
+var _path, _path2, _path3, _path4, _g, _defs;
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+import * as React from "react";
+var SvgSwapExecutedCheck = function SvgSwapExecutedCheck(props) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 190,
+    height: 190,
+    fill: "none"
+  }, props), _path || (_path = /*#__PURE__*/React.createElement("path", {
+    fill: "url(#swap-executed-check_svg__a)",
+    fillRule: "evenodd",
+    d: "M95 59.25c-19.744 0-35.75 16.006-35.75 35.75S75.256 130.75 95 130.75s35.75-16.006 35.75-35.75S114.744 59.25 95 59.25ZM51 95c0-24.3 19.7-44 44-44 24.301 0 44 19.7 44 44 0 24.301-19.699 44-44 44-24.3 0-44-19.699-44-44Z",
+    clipRule: "evenodd"
+  })), _path2 || (_path2 = /*#__PURE__*/React.createElement("path", {
+    fill: "url(#swap-executed-check_svg__b)",
+    fillOpacity: 0.4,
+    fillRule: "evenodd",
+    d: "M50.65 95c0-24.493 19.856-44.35 44.35-44.35S139.35 70.507 139.35 95c0 24.494-19.856 44.35-44.35 44.35S50.65 119.494 50.65 95ZM95 51.35c-24.107 0-43.65 19.543-43.65 43.65 0 24.108 19.543 43.65 43.65 43.65s43.65-19.542 43.65-43.65c0-24.107-19.543-43.65-43.65-43.65Zm0 8.25c-19.551 0-35.4 15.85-35.4 35.4 0 19.551 15.849 35.4 35.4 35.4s35.4-15.849 35.4-35.4c0-19.55-15.849-35.4-35.4-35.4ZM58.9 95c0-19.937 16.162-36.1 36.1-36.1 19.938 0 36.1 16.163 36.1 36.1 0 19.938-16.162 36.1-36.1 36.1-19.938 0-36.1-16.162-36.1-36.1Z",
+    clipRule: "evenodd"
+  })), _path3 || (_path3 = /*#__PURE__*/React.createElement("path", {
+    fill: "url(#swap-executed-check_svg__c)",
+    fillRule: "evenodd",
+    d: "M114.359 79.41a4.125 4.125 0 0 1 .114 5.832l-24.264 25.235a4.128 4.128 0 0 1-6.04-.099l-8.735-9.706a4.125 4.125 0 0 1 6.132-5.52l5.77 6.411 21.191-22.04a4.124 4.124 0 0 1 5.832-.114Z",
+    clipRule: "evenodd"
+  })), _path4 || (_path4 = /*#__PURE__*/React.createElement("path", {
+    fill: "url(#swap-executed-check_svg__d)",
+    fillOpacity: 0.4,
+    fillRule: "evenodd",
+    d: "M108.274 79.281a4.476 4.476 0 0 1 6.452 6.204L90.461 110.72a4.477 4.477 0 0 1-6.552-.108l-8.735-9.706a4.475 4.475 0 1 1 6.652-5.987l5.518 6.13 20.93-21.768Zm5.842.381a3.774 3.774 0 0 0-5.337.105l-21.192 22.039a.349.349 0 0 1-.512-.009l-5.77-6.41a3.775 3.775 0 1 0-5.611 5.051l8.735 9.706a3.775 3.775 0 0 0 5.527.091L114.221 85a3.775 3.775 0 0 0-.105-5.338Z",
+    clipRule: "evenodd"
+  })), _g || (_g = /*#__PURE__*/React.createElement("g", {
+    fillRule: "evenodd",
+    clipRule: "evenodd",
+    filter: "url(#swap-executed-check_svg__e)",
+    opacity: 0.4
+  }, /*#__PURE__*/React.createElement("path", {
+    fill: "url(#swap-executed-check_svg__f)",
+    d: "M95 59.25c-19.744 0-35.75 16.006-35.75 35.75S75.256 130.75 95 130.75s35.75-16.006 35.75-35.75S114.744 59.25 95 59.25ZM51 95c0-24.3 19.7-44 44-44 24.301 0 44 19.7 44 44 0 24.301-19.699 44-44 44-24.3 0-44-19.699-44-44Z"
+  }), /*#__PURE__*/React.createElement("path", {
+    fill: "url(#swap-executed-check_svg__g)",
+    fillOpacity: 0.4,
+    d: "M50.65 95c0-24.493 19.856-44.35 44.35-44.35S139.35 70.507 139.35 95c0 24.494-19.856 44.35-44.35 44.35S50.65 119.494 50.65 95ZM95 51.35c-24.107 0-43.65 19.543-43.65 43.65 0 24.108 19.543 43.65 43.65 43.65s43.65-19.542 43.65-43.65c0-24.107-19.543-43.65-43.65-43.65Zm0 8.25c-19.551 0-35.4 15.85-35.4 35.4 0 19.551 15.849 35.4 35.4 35.4s35.4-15.849 35.4-35.4c0-19.55-15.849-35.4-35.4-35.4ZM58.9 95c0-19.937 16.162-36.1 36.1-36.1 19.938 0 36.1 16.163 36.1 36.1 0 19.938-16.162 36.1-36.1 36.1-19.938 0-36.1-16.162-36.1-36.1Z"
+  }), /*#__PURE__*/React.createElement("path", {
+    fill: "url(#swap-executed-check_svg__h)",
+    d: "M114.359 79.41a4.125 4.125 0 0 1 .114 5.832l-24.264 25.235a4.128 4.128 0 0 1-6.04-.099l-8.735-9.706a4.125 4.125 0 0 1 6.132-5.52l5.77 6.411 21.191-22.04a4.124 4.124 0 0 1 5.832-.114Z"
+  }), /*#__PURE__*/React.createElement("path", {
+    fill: "url(#swap-executed-check_svg__i)",
+    fillOpacity: 0.4,
+    d: "M108.274 79.281a4.476 4.476 0 0 1 6.452 6.204L90.461 110.72a4.477 4.477 0 0 1-6.552-.108l-8.735-9.706a4.475 4.475 0 1 1 6.652-5.987l5.518 6.13 20.93-21.768Zm5.842.381a3.774 3.774 0 0 0-5.337.105l-21.192 22.039a.349.349 0 0 1-.512-.009l-5.77-6.41a3.775 3.775 0 1 0-5.611 5.051l8.735 9.706a3.775 3.775 0 0 0 5.527.091L114.221 85a3.775 3.775 0 0 0-.105-5.338Z"
+  }))), _defs || (_defs = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+    id: "swap-executed-check_svg__a",
+    x1: 55,
+    x2: 124.5,
+    y1: 20.5,
+    y2: 135,
+    gradientUnits: "userSpaceOnUse"
+  }, /*#__PURE__*/React.createElement("stop", {
+    stopColor: "#46DA93",
+    stopOpacity: 0
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 1,
+    stopColor: "#46DA93"
+  })), /*#__PURE__*/React.createElement("linearGradient", {
+    id: "swap-executed-check_svg__b",
+    x1: 95,
+    x2: 95,
+    y1: 51,
+    y2: 139,
+    gradientUnits: "userSpaceOnUse"
+  }, /*#__PURE__*/React.createElement("stop", {
+    stopColor: "#6BE8CF"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 1,
+    stopColor: "#54CF96",
+    stopOpacity: 0.75
+  })), /*#__PURE__*/React.createElement("linearGradient", {
+    id: "swap-executed-check_svg__c",
+    x1: 76.25,
+    x2: 99.888,
+    y1: 66.652,
+    y2: 114.626,
+    gradientUnits: "userSpaceOnUse"
+  }, /*#__PURE__*/React.createElement("stop", {
+    stopColor: "#46DA93",
+    stopOpacity: 0
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 1,
+    stopColor: "#46DA93"
+  })), /*#__PURE__*/React.createElement("linearGradient", {
+    id: "swap-executed-check_svg__d",
+    x1: 95,
+    x2: 95,
+    y1: 78.258,
+    y2: 111.744,
+    gradientUnits: "userSpaceOnUse"
+  }, /*#__PURE__*/React.createElement("stop", {
+    stopColor: "#6BE8CF"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 1,
+    stopColor: "#54CF96",
+    stopOpacity: 0.75
+  })), /*#__PURE__*/React.createElement("linearGradient", {
+    id: "swap-executed-check_svg__f",
+    x1: 55,
+    x2: 124.5,
+    y1: 20.5,
+    y2: 135,
+    gradientUnits: "userSpaceOnUse"
+  }, /*#__PURE__*/React.createElement("stop", {
+    stopColor: "#46DA93",
+    stopOpacity: 0
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 1,
+    stopColor: "#46DA93"
+  })), /*#__PURE__*/React.createElement("linearGradient", {
+    id: "swap-executed-check_svg__g",
+    x1: 95,
+    x2: 95,
+    y1: 51,
+    y2: 139,
+    gradientUnits: "userSpaceOnUse"
+  }, /*#__PURE__*/React.createElement("stop", {
+    stopColor: "#6BE8CF"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 1,
+    stopColor: "#54CF96",
+    stopOpacity: 0.75
+  })), /*#__PURE__*/React.createElement("linearGradient", {
+    id: "swap-executed-check_svg__h",
+    x1: 76.25,
+    x2: 99.888,
+    y1: 66.652,
+    y2: 114.626,
+    gradientUnits: "userSpaceOnUse"
+  }, /*#__PURE__*/React.createElement("stop", {
+    stopColor: "#46DA93",
+    stopOpacity: 0
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 1,
+    stopColor: "#46DA93"
+  })), /*#__PURE__*/React.createElement("linearGradient", {
+    id: "swap-executed-check_svg__i",
+    x1: 95,
+    x2: 95,
+    y1: 78.258,
+    y2: 111.744,
+    gradientUnits: "userSpaceOnUse"
+  }, /*#__PURE__*/React.createElement("stop", {
+    stopColor: "#6BE8CF"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 1,
+    stopColor: "#54CF96",
+    stopOpacity: 0.75
+  })), /*#__PURE__*/React.createElement("filter", {
+    id: "swap-executed-check_svg__e",
+    width: 232,
+    height: 232,
+    x: -21,
+    y: -21,
+    colorInterpolationFilters: "sRGB",
+    filterUnits: "userSpaceOnUse"
+  }, /*#__PURE__*/React.createElement("feFlood", {
+    floodOpacity: 0,
+    result: "BackgroundImageFix"
+  }), /*#__PURE__*/React.createElement("feBlend", {
+    "in": "SourceGraphic",
+    in2: "BackgroundImageFix",
+    result: "shape"
+  }), /*#__PURE__*/React.createElement("feGaussianBlur", {
+    result: "effect1_foregroundBlur_6902_127654",
+    stdDeviation: 25
+  })))));
+};
+export default SvgSwapExecutedCheck;

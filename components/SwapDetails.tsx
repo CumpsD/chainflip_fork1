@@ -51,7 +51,7 @@ export const RouteLabelValue = ({
 
 const RouteSection = ({ route, disabled }: { route: RouteResponse; disabled: boolean }) => {
   const [showRouteDetails, setShowRouteDetails] = useState<boolean>(false);
-
+  
   const steps = (
     <div className="flex items-center justify-around space-x-1">
       {route.steps.map((step, index) => (

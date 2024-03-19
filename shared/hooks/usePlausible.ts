@@ -1,3 +1,4 @@
+import Script from 'next/script'
 import { useEffect } from 'react'
 
 const usePlausible = () => {
@@ -9,10 +10,15 @@ const usePlausible = () => {
       script.async = true
       script.defer = true
       script.dataset.api = '/api/event'
-      script.dataset.domain = 'https://swap.chainflip.io/' // window.location.host; // Set script data-domain dynamically
+      script.dataset.domain = window.location.host // Set script data-domain dynamically
       script.src = '/js/script.js'
       document.head.append(script)
     }
+
+    console.log(
+      '#################################usePlausible use Effect  ',
+      document
+    )
   }, [])
 }
 
