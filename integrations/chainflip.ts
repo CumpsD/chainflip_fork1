@@ -109,17 +109,16 @@ const mapChainflipChain = (chainflipChain: ChainflipChain): ChainId =>
 const mapChainflipAsset = (
   chainflipChain: ChainflipChain,
   chainflipAsset: ChainflipAsset
-): any => {
-  return null
+): ChainflipToken => {
+  const ID: string = getChainflipId({
+    asset: chainflipAsset,
+    chain: chainflipChain,
+  })
+
+  // return chainflipAssetMap[ID]
+  return chainflipAssetMap[ID as keyof typeof chainflipAssetMap]
 }
 
-// const mapChainflipAsset = (
-//   chainflipChain: ChainflipChain,
-//   chainflipAsset: ChainflipAsset
-// ): ChainflipToken =>
-//   chainflipAssetMap[
-//     getChainflipId({ asset: chainflipAsset, chain: chainflipChain })
-//   ]
 const mapChainflipStatus = (
   chainflipStatus: ChainflipSwapStatusResponse['state']
 ): SwapStatus => chainflipStatusMap[chainflipStatus] ?? 'unknown'
@@ -386,6 +385,8 @@ export class ChainflipIntegration implements BaseIntegration {
   getChains = async () => {
     const sdkChains = await this.sdk.getChains()
 
+    // console.log('===================SDK CHAINS : ', sdkChains)
+
     return sdkChains
       .map((chain) => chainById(mapChainflipChain(chain.chain)))
       .filter(isTruthy)
@@ -451,9 +452,11 @@ export class ChainflipIntegration implements BaseIntegration {
 
   getTokens = async (chainId: ChainId) => {
     const chainflipChain = mapChainIdToChainflip(chainId)
+
     if (!chainflipChain) return []
 
     const sdkAssets = await this.sdk.getAssets(chainflipChain)
+    // console.log('=============== sdkAssets: ', sdkAssets)
 
     return sdkAssets.map((asset) => mapChainflipAsset(asset.chain, asset.asset))
   }

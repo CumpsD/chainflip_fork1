@@ -8,9 +8,12 @@ import {
   ethereum,
   goerli,
   polkadot,
-} from '@/shared/assets/chains';
-import { type ChainflipAsset, type ChainflipChain } from '@/shared/utils/chainflip';
-import { assert } from './helpers';
+} from '@/shared/assets/chains'
+import {
+  type ChainflipAsset,
+  type ChainflipChain,
+} from '@/shared/utils/chainflip'
+import { assert } from './helpers'
 import {
   beth$,
   bflip$,
@@ -26,36 +29,44 @@ import {
   tbtc$,
   tflip$,
   usdc$,
-} from '../assets/tokens';
+} from '../assets/tokens'
 
-const chainflipNetworks = ['unknown', 'backspin', 'sisyphos', 'perseverance', 'mainnet'] as const;
+const chainflipNetworks = [
+  'unknown',
+  'backspin',
+  'sisyphos',
+  'perseverance',
+  'mainnet',
+] as const
 
-export type ChainflipNetwork = (typeof chainflipNetworks)[number];
+export type ChainflipNetwork = (typeof chainflipNetworks)[number]
 
-function assertChainflipNetwork(network: string): asserts network is ChainflipNetwork {
+function assertChainflipNetwork(
+  network: string
+): asserts network is ChainflipNetwork {
   assert(
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     chainflipNetworks.includes(network as any),
-    `Invalid network: "${network}"`,
-  );
+    `Invalid network: "${network}"`
+  )
 }
 
 export const getChainflipNetwork = (): ChainflipNetwork => {
   // using unknown because this function is bundled in the shared package
-  const network = process.env.NEXT_PUBLIC_CHAINFLIP_NETWORK ?? 'unknown';
-  assertChainflipNetwork(network);
-  return network;
-};
+  const network = process.env.NEXT_PUBLIC_CHAINFLIP_NETWORK ?? 'unknown'
+  assertChainflipNetwork(network)
+  return network
+}
 
 const getEthereumChain = () => {
-  const network = getChainflipNetwork();
-  if (network === 'backspin') return backspinEthereum;
-  if (network === 'mainnet') return ethereum;
-  return goerli;
-};
+  const network = getChainflipNetwork()
+  if (network === 'backspin') return backspinEthereum
+  if (network === 'mainnet') return ethereum
+  return goerli
+}
 
 const getChainflipToken = (asset: ChainflipAsset): ChainflipToken => {
-  const network = getChainflipNetwork();
+  const network = getChainflipNetwork()
 
   if (network === 'mainnet') {
     return {
@@ -64,7 +75,7 @@ const getChainflipToken = (asset: ChainflipAsset): ChainflipToken => {
       Eth: eth$,
       Dot: dot$,
       Btc: btc$,
-    }[asset];
+    }[asset]
   }
 
   if (network === 'backspin') {
@@ -74,7 +85,7 @@ const getChainflipToken = (asset: ChainflipAsset): ChainflipToken => {
       Eth: beth$,
       Dot: pdot$,
       Btc: tbtc$,
-    }[asset];
+    }[asset]
   }
 
   return {
@@ -83,14 +94,14 @@ const getChainflipToken = (asset: ChainflipAsset): ChainflipToken => {
     Eth: geth$,
     Dot: pdot$,
     Btc: tbtc$,
-  }[asset];
-};
+  }[asset]
+}
 
 export const chainflipChainMap = {
   Bitcoin: getChainflipNetwork() === 'mainnet' ? bitcoin : bitcoinTestnet,
   Ethereum: getEthereumChain(),
   Polkadot: getChainflipNetwork() === 'mainnet' ? polkadot : dotTestnet,
-} as const satisfies Record<ChainflipChain, Chain>;
+} as const satisfies Record<ChainflipChain, Chain>
 
 export const chainflipAssetMap = {
   Eth: getChainflipToken('Eth'),
@@ -98,14 +109,14 @@ export const chainflipAssetMap = {
   Flip: getChainflipToken('Flip'),
   Dot: getChainflipToken('Dot'),
   Btc: getChainflipToken('Btc'),
-} as const satisfies Record<ChainflipAsset, ChainflipToken>;
+} as const satisfies Record<ChainflipAsset, ChainflipToken>
 
 export const mapTokenToChainflipAsset = (
   chainId: ChainId,
-  tokenAddress: string,
+  tokenAddress: string
 ): ChainflipAsset | undefined =>
   Object.entries(chainflipAssetMap).find(
-    ([, token]) => token.chain.id === chainId && token.address === tokenAddress,
-  )?.[0] as ChainflipAsset | undefined;
+    ([, token]) => token.chain.id === chainId && token.address === tokenAddress
+  )?.[0] as ChainflipAsset | undefined
 
-export const FLIP_SYMBOL = chainflipAssetMap.Flip.symbol;
+export const FLIP_SYMBOL = chainflipAssetMap.Flip.symbol

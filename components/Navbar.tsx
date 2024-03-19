@@ -122,11 +122,11 @@ export const Navbar = (): JSX.Element => {
                 <CloseIcon className="cursor-pointer" />
               </div>
             </div>
-            <img
+            {/* <img
               src="/mobile-modal-hero.png"
               className="absolute right-0 top-0 z-0 w-6/12"
               alt=""
-            />
+            /> */}
             <div className="z-20 p-8">
               <div className="pointer-events-auto mt-16 flex flex-col space-y-10">
                 <NavLinks />
