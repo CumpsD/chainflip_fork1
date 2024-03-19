@@ -17,10 +17,11 @@ export default function Toggle({ enabled, onToggle }: ToggleProps) {
         <span
           aria-hidden="true"
           className={classNames(
-            'inline-block h-[12px] w-[12px] translate-x-0 transform rounded-full bg-cf-light-3 transition duration-200 ease-in-out',
-            'ui-checked:translate-x-[14px] ui-checked:bg-cf-green-1 ui-checked:shadow-[0px_0px_4px] ui-checked:shadow-cf-green-1',
+            'inline-block h-[12px] w-[12px] translate-x-0 transform rounded-full  transition duration-200 ease-in-out',
             // group-hover with ui-not-checked is not working
             !enabled && 'group-hover:bg-cf-white',
+            enabled && 'translate-x-[14px]  shadow-[0px_0px_4px] shadow-cf-green-1',
+            enabled ? 'bg-cf-green-1' :'bg-cf-light-3'
           )}
         />
       </Switch>
