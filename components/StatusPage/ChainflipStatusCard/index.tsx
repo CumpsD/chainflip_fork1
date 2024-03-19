@@ -165,7 +165,7 @@ export default function ChainflipStatusCardContent({
       {!status.integrationData && useDepositChannel && (
         <motion.div key="opening-deposit-channel" {...defaultAnimationProps}>
           <div className="relative flex flex-col items-center justify-center space-y-4 px-5 pb-6 pt-2">
-            <Lottie as="div" animationData={qrCodeAnimation} autoplay loop className="h-44 w-44" />
+            <Lottie as="div" animationData={qrCodeAnimation} autoplay loop className="h-44 w-44 z-10 relative" />
             <motion.div
               initial={false}
               animate={!isCreatingDepositChannel.current ? 'open' : 'hidden'}
