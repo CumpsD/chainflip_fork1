@@ -2,15 +2,15 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useMutation } from '@tanstack/react-query';
 import { AnimatePresence, motion } from 'framer-motion';
 import { toast } from 'sonner';
-// import * as qrCodeAnimation from '@/shared/animations/qr-code.json';
+import * as qrCodeAnimation from '@/shared/animations/qr-code.json';
 import { isEvmChain } from '@/shared/assets/chains';
 import { ChainTokenLogo } from '@/shared/components';
 import useTracking from '@/shared/hooks/useTracking';
 import { EmojiSadIcon } from '@/shared/icons/large';
 import { sleep } from '@/shared/utils';
-// import Lottie from '@/shared/utils/Lottie';
-import SendChainflipAssets from './SendChainflipAssets';
-import SwappingArrows from './SwappingArrows';
+import Lottie from '@/shared/utils/Lottie';
+import SendChainflipAssets from '@/components/StatusPage/ChainflipStatusCard/SendChainflipAssets'
+import SwappingArrows from '@/components/StatusPage/ChainflipStatusCard/SwappingArrows'
 import SwapExecutedCheckSvg from '@/assets/svg/swap-executed-check'
 import useChainflipBlockConfirmations from '@/hooks/useChainflipBlockConfirmations'
 import { integrationManager, type StatusResponse } from '@/integrations'
@@ -165,7 +165,7 @@ export default function ChainflipStatusCardContent({
       {!status.integrationData && useDepositChannel && (
         <motion.div key="opening-deposit-channel" {...defaultAnimationProps}>
           <div className="relative flex flex-col items-center justify-center space-y-4 px-5 pb-6 pt-2">
-            {/* <Lottie as="div" animationData={qrCodeAnimation} autoplay loop className="h-44 w-44" /> */}
+            <Lottie as="div" animationData={qrCodeAnimation} autoplay loop className="h-44 w-44" />
             <motion.div
               initial={false}
               animate={!isCreatingDepositChannel.current ? 'open' : 'hidden'}
