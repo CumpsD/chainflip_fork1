@@ -3,9 +3,9 @@ import { useRouter } from 'next/router';
 import { toCamelCase, TokenAmount } from '@/shared/utils';
 import { type ChainflipAsset } from '@/shared/utils/chainflip';
 import { chainflipAssetMap } from '@/shared/utils/env';
-// import Lottie from '@/shared/utils/Lottie';
+import Lottie from '@/shared/utils/Lottie';
 import TokenInputField from './TokenInputField';
-// import switchJSON from '../../assets/lotties/switch.json';
+import switchJSON from '@/shared/assets/lotties/switch.json'
 import useStore from '../../hooks/useStore';
 
 export default function TokenFields({
@@ -88,14 +88,13 @@ export default function TokenFields({
           }
         }}
       >
-        {/* <Lottie
+        <Lottie
           as="button"
           animationData={switchJSON}
           autoplay={false}
           loop={false}
           className="h-[22px] w-[22px] rotate-90 stroke-white"
-        /> */}
-        <></>
+        /> 
       </div>
       <TokenInputField
         label="Receive"

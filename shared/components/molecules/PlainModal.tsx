@@ -33,7 +33,7 @@ export const PlainModal = ({
       </Transition.Child>
 
       <div
-        className="flex h-full flex-col items-center justify-center"
+        className="flex h-full flex-col items-center justify-center z-10 relative"
         role="dialog"
         aria-modal="true"
         aria-labelledby="modal-headline"
