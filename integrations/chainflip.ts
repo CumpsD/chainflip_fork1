@@ -158,8 +158,6 @@ const buildEventLog = (
       link: `${process.env.NEXT_PUBLIC_EXPLORER_URL}/events/${sdkStatus.depositReceivedBlockIndex}`,
     })
 
-    console.log('################SwapID: ', sdkStatus.swapId)
-
     if (sdkStatus.swapId) {
       pastEvents.push({
         message: `Swap scheduled`,
