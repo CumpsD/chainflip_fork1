@@ -1,6 +1,6 @@
 import classNames from 'classnames';
-// import grayCopyAnimationData from '@/shared/animations/copy-gray.json';
-// import copyAnimationData from '@/shared/animations/copy.json';
+import grayCopyAnimationData from '@/shared/animations/copy-gray.json';
+import copyAnimationData from '@/shared/animations/copy.json';
 import Lottie from '@/shared/utils/Lottie';
 import { copy } from '../../utils/helpers';
 
@@ -24,21 +24,20 @@ const CopyButton: React.FC<CopyButtonProps> = ({
   };
 
   const lottie = (
-    // <Lottie
-    //   as="button"
-    //   className={classNames(className, 'min-w-[24px]')}
-    //   animationData={gray ? grayCopyAnimationData : copyAnimationData}
-    //   autoplay={false}
-    //   speed={1}
-    //   loop={false}
-    //   onClick={(e) => {
-    //     e.stopPropagation();
-    //     copy(textToCopy);
-    //   }}
-    //   playOnce
-    //   {...props}
-    // />
-    <></>
+    <Lottie
+      as="button"
+      className={classNames(className, 'min-w-[24px]')}
+      animationData={gray ? grayCopyAnimationData : copyAnimationData}
+      autoplay={false}
+      speed={1}
+      loop={false}
+      onClick={(e) => {
+        e.stopPropagation();
+        copy(textToCopy);
+      }}
+      playOnce
+      {...props}
+    />
   );
 
   return displayText ? (
