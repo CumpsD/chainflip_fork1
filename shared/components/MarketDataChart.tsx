@@ -265,30 +265,30 @@ const MarketDataChart = ({
         scaleMargins: { bottom: 0.2, top: 0 },
       });
 
-      // const handleMove: LightweightCharts.MouseEventHandler = (params) => {
-      //   if (params.point === undefined) {
-      //     setTooltipInfo(undefined);
-      //     return;
-      //   }
+      const handleMove: any  = (params: LightweightCharts.MouseEventParams) => {
+          if (params.point === undefined) {
+            setTooltipInfo(undefined);
+            return;
+          }
 
-      //   const point = params.seriesData.get(indexLine) as LightweightCharts.LineData | undefined;
-      //   const indexPrice = point?.value;
-      //   const vol = params.seriesData.get(volume) as LightweightCharts.HistogramData | undefined;
-      //   const candle = params.seriesData.get(candles) as
-      //     | LightweightCharts.CandlestickData
-      //     | undefined;
-      //   setTooltipInfo({
-      //     x: params.point.x + chart.priceScale('left').width(),
-      //     y: params.point.y,
-      //     volume: vol?.value,
-      //     indexPrice,
-      //     poolPrice: candle?.low,
-      //     chartWidth: div.clientWidth,
-      //   });
-      // };
-      // cleanup(() => chart.unsubscribeCrosshairMove(handleMove));
+        const point = params.seriesData.get(indexLine) as LightweightCharts.LineData | undefined;
+        const indexPrice = point?.value;
+        const vol = params.seriesData.get(volume) as LightweightCharts.HistogramData | undefined;
+        const candle = params.seriesData.get(candles) as
+          | LightweightCharts.CandlestickData
+          | undefined;
+        setTooltipInfo({
+          x: params.point.x + chart.priceScale('left').width(),
+          y: params.point.y,
+          volume: vol?.value,
+          indexPrice,
+          poolPrice: candle?.low,
+          chartWidth: div.clientWidth,
+        });
+      };
+      cleanup(() => chart.unsubscribeCrosshairMove(handleMove));
 
-      // chart.subscribeCrosshairMove(handleMove);
+      chart.subscribeCrosshairMove(handleMove);
 
       cleanup(() => {
         chart.remove();
