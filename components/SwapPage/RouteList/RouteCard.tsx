@@ -1,13 +1,13 @@
 import React from 'react';
 import BigNumber from 'bignumber.js';
 import classNames from 'classnames';
-// import GreenSpinnerJSON from '@/shared/animations/spinner-green.json';
+import GreenSpinnerJSON from '@/shared/animations/spinner-green.json';
 import { Tooltip, ChainTokenLogo } from '@/shared/components';
 import useTokenPrice from '@/shared/hooks/useTokenPrice';
 import { EmojiSadIcon } from '@/shared/icons/large';
 import { ClockIcon, LayersIcon } from '@/shared/icons/small';
 import { formatToApproxTime } from '@/shared/utils';
-// import Lottie from '@/shared/utils/Lottie';
+import Lottie from '@/shared/utils/Lottie';
 import { integrationManager, type RouteResponse } from '../../../integrations';
 import RadioButton from '../../RadioButton';
 import { SwapDetails } from '../../SwapDetails';
@@ -39,7 +39,7 @@ const Badge = ({
 export const RouteCardLoading = () => (
   <div className="bg-holy-radial-gray-3-60 flex h-[334px] items-center justify-center space-y-3 rounded-md border border-cf-gray-4 p-5 text-14 text-cf-light-1 backdrop-blur-[6px] duration-150">
     <div className="flex items-center">
-      {/* <Lottie as="div" className="mr-2 h-5 w-5" animationData={GreenSpinnerJSON} autoplay loop /> */}
+      <Lottie as="div" className="mr-2 h-5 w-5" animationData={GreenSpinnerJSON} autoplay loop />
       <span>Fetching routes...</span>
     </div>
   </div>
