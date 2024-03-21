@@ -159,3 +159,16 @@ table {
 .param-optional-label {
   @apply !text-cf-light-1/80 font-bold ml-1 text-[12px];
 }
+
+/* Settings Card */
+.bg-deposit-mode-card {
+  background: radial-gradient(63.94% 63.94% at 50% 0,hsla(0,0%,100%,.06) 0,hsla(0,0%,100%,0) 100%),#161616;
+}
+
+.bg-route-card-selected {
+  background: radial-gradient(63.94% 63.94% at 50% 0,hsla(0,0%,100%,.06) 0,hsla(0,0%,100%,0) 100%),#1c1f1e;
+}
+
+.bg-deposit-mode-card:hover {
+  background: radial-gradient(63.94% 63.94% at 50% 0,hsla(0,0%,100%,.06) 0,hsla(0,0%,100%,0) 100%),#1c1c1c;
+}

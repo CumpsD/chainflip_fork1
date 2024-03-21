@@ -157,14 +157,14 @@ const buildEventLog = (
       logo: Logo,
       link: `${process.env.NEXT_PUBLIC_EXPLORER_URL}/events/${sdkStatus.depositReceivedBlockIndex}`,
     })
+
     if (sdkStatus.swapId) {
       pastEvents.push({
         message: `Swap scheduled`,
         status: 'success',
         linkTitle: 'View on Explorer',
         logo: Logo,
-        // link: `${process.env.NEXT_PUBLIC_EXPLORER_URL}/swaps/${sdkStatus.swapId}`,
-        link: '#',
+        link: `${process.env.NEXT_PUBLIC_EXPLORER_URL}/swaps/${sdkStatus.swapId}`,
       })
     }
   } else {
@@ -646,19 +646,30 @@ export class ChainflipIntegration implements BaseIntegration {
   }
 
   createDepositChannel = async (swapId: string) => {
+    console.log('############## createDepositChannel ##############')
+
     const preparedRoute = loadRouteFromLocalStorage('chainflip', swapId)
     if (!preparedRoute || preparedRoute.integration !== 'chainflip') {
       throw new Error(`Invalid route when opening deposit channel`)
     }
+    console.log(
+      '############## createDepositChannel ##############',
+      preparedRoute
+    )
 
     const response = await this.sdk.requestDepositAddress(
       preparedRoute.integrationData
     )
+
+    console.log('############## createDepositChannel ##############', response)
+
     storeDepositChannelIdInLocalStorage(
       'chainflip',
       swapId,
       response.depositChannelId
     )
+
+    console.log('####################   ', response)
 
     return response
   }

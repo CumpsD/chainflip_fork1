@@ -15,11 +15,13 @@ const Layout = ({
 }) => {
   const { status, isWaitingRoomStatus } = useSwapStatus();
 
+  
   const isSuccess = status?.status === 'completed';
   const isFailed = status?.status === 'failed';
+  
   const { address } = useAccount();
-  const isSanctioned = useAddressScreening(address);
 
+  const isSanctioned = useAddressScreening(address);
   if (isSanctioned) return null;
 
   return (
